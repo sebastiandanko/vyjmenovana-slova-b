@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vyjmenovaná slova po B</title>
+<meta name="description" content="Online kvíz na vyjmenovaná slova po B. 39 otázek, okamžitá zpětná vazba a vysvětlení.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='sans-serif' font-weight='bold'>B</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="wrap">
+
+  <!-- ÚVOD -->
+  <section id="screen-start" class="screen">
+    <p class="eyebrow">Český jazyk · pravopis</p>
+    <h1>Vyjmenovaná slova <span class="mark">po B</span></h1>
+    <p class="lede">Doplň i/y, odhal chytáky a nauč se, kdy se píše <em>být</em> a kdy <em>bít</em>.</p>
+
+    <ul class="wordlist">
+      <li>být</li><li>bydlit</li><li>obyvatel</li><li>byt</li><li>příbytek</li>
+      <li>nábytek</li><li>dobytek</li><li>obyčej</li><li>bystrý</li><li>bylina</li>
+      <li>kobyla</li><li>býk</li><li>Přibyslav</li>
+    </ul>
+
+    <div class="actions">
+      <button class="btn btn-primary" data-start="10">Rychlý kvíz · 10 otázek</button>
+      <button class="btn" data-start="all">Velký kvíz · všechny otázky</button>
+    </div>
+    <p class="best" id="best" hidden></p>
+  </section>
+
+  <!-- KVÍZ -->
+  <section id="screen-quiz" class="screen" hidden>
+    <header class="bar">
+      <div class="bar-meta">
+        <span id="counter">1 / 10</span>
+        <span id="score">0 bodů</span>
+      </div>
+      <div class="progress"><div class="progress-fill" id="progress"></div></div>
+    </header>
+
+    <p class="qtype" id="qtype">Doplň správně</p>
+    <h2 class="question" id="question"></h2>
+    <div class="options" id="options"></div>
+
+    <div class="feedback" id="feedback" hidden>
+      <p class="feedback-head" id="feedback-head"></p>
+      <p class="feedback-hint" id="feedback-hint"></p>
+    </div>
+
+    <button class="btn btn-primary next" id="next" hidden>Další otázka</button>
+  </section>
+
+  <!-- VÝSLEDEK -->
+  <section id="screen-done" class="screen" hidden>
+    <p class="eyebrow">Hotovo</p>
+    <h2 class="result-score"><span id="final-score">0</span><span class="of" id="final-of">/10</span></h2>
+    <p class="result-msg" id="result-msg"></p>
+
+    <div class="review" id="review" hidden>
+      <h3>Co si ještě projít</h3>
+      <ul id="review-list"></ul>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="again">Zkusit znovu</button>
+      <button class="btn" id="home">Zpět na začátek</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">Procvičování pravopisu · <a href="https://github.com/sebastiandanko/vyjmenovana-slova-b">zdrojový kód</a></footer>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
